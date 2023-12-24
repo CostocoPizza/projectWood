@@ -15,9 +15,24 @@
       <div class="centeredContainer">
          <h1>Welcome to <span class="gradientText">Costco Pizza Games</span></h1>
          <script src="js/splashTexts.js"></script>
+         <button onclick="openCloakedTab()" class="gradientButton">Cloak</button>
+         <button onclick="openGamesPage()" class="gradientButton">Games</button>
       </div>
       <footer class="footer">
          <p>Made with ❤️ from a talented teen</p>
       </footer>
+      <script>
+        function openCloakedTab() {
+            var url = "google.com"; // Replace with your desired URL
+            var win = window.open("", "_blank");
+            if (win) {
+                win.document.write('<html><head></head><body style="margin: 0;"><iframe style="width: 100%; height: 100%; border: none;" src="' + url + '"></iframe></body></html>');
+            }
+        }
+
+        function openGamesPage() {
+            window.location.href = "./pages/gamePage.html";
+        }
+    </script>
    </body>
 </html>

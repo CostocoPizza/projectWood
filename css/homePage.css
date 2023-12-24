@@ -12,3 +12,31 @@ h1 > span {
     font-family: "Montserrat", sans-serif;
     color: var(--accent);
 }
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .gradientButton {
+    display: inline-block;
+    padding: 5px 25px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #f9b752, #f45925);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s infinite;
+  }
+  
+
+  

@@ -20,11 +20,15 @@
 - Add Cloaking
 - Socials
 - Credits Page
-- 
+- Buttons on main page
 
 ## Info
 Color Scheme/Palet
 Background color #171818
-Navbar Color #1c1d1d
+Navbar/Other Color #1c1d1d
+Accent Color 1 #f9b11f
+Accent Color 2 #f45925
+
+
 
 
