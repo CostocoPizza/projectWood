@@ -17,10 +17,9 @@
 - Add/Find Games
 - Add/Find Apps
 - Wildcarding (Cloudflare?)
-- Add Cloaking
-- Socials
-- Credits Page
-- Buttons on main page
+
+
+
 
 ## Info
 Color Scheme/Palet
