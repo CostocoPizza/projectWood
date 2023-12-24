@@ -2,44 +2,34 @@ body {
   margin: 0;
   background-color: #171818;
 }
-
 .centeredContainer {
   position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .gradientText {
   --bgSize: 400%;
   --colorOne: hsl(15 90% 55%);
   --colorTwo: hsl(40 95% 55%);
   font-size: 36px;
-  background: linear-gradient(
-    90deg,
-    var(--colorOne),
-    var(--colorTwo),
-    var(--colorOne)
-  ) 0 0 / var(--bgSize) 100%;
+  background: linear-gradient( 90deg, var(--colorOne), var(--colorTwo), var(--colorOne) ) 0 0 / var(--bgSize) 100%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   animation: move-bg 10s infinite linear;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .gradientText {
-    animation: move-bg 10s linear infinite;
-  }
+      animation: move-bg 10s linear infinite;
+ }
 }
-
 @keyframes move-bg {
   to {
-    background-position: var(--bgSize) 0;
-  }
+      background-position: var(--bgSize) 0;
+ }
 }
-
 .navbar {
   position: fixed;
   top: 0;
@@ -48,7 +38,6 @@ body {
   justify-content: center;
   background-color: #1c1d1d;
 }
-
 .navbar a {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -58,7 +47,16 @@ body {
   padding: 12px 50px;
   display: inline-block;
 }
-
 .navbar a:hover {
   background-color: #1c1d1d;
+}
+.footer {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }
