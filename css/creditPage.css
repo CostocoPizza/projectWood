@@ -6,11 +6,13 @@ h1 {
 
 h2 {
     font-family: "Montserrat", sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     color: white;
 }
 
-h1 > span {
+.linkA {
     font-family: "Montserrat", sans-serif;
-    color: var(--accent);
+    font-size: 24px;
+    color: #0284d4;
+    text-decoration: none;
 }
