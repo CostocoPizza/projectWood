@@ -6,17 +6,6 @@
     text-align: center;
 }
 
-h1 {
-    font-family: "Montserrat", sans-serif;
-    font-size: 36px;
-    color: white;
-}
-
-h1 > span {
-    font-family: "Montserrat", sans-serif;
-    color: var(--accent);
-}
-
 .gradientText {
   --bgSize: 400%;
   --colorOne: hsl(15 90% 55%);
