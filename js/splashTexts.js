@@ -8,5 +8,4 @@ var splashTextsList = [
 ]
 var randomSplashIndex = Math.floor(Math.random() * splashTextsList.length);
 var randomSplashText = splashTextsList[randomSplashIndex];
-console.log(splashTextsList)
-document.write("<h1>" + randomSplashText + "</h1>");
+document.write("<h2>" + randomSplashText + "</h2>");

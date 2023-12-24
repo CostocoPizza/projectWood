@@ -1,9 +1,9 @@
 .centeredContainer {
-    position: absolute;
+  position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-    text-align: center;
+  text-align: center;
 }
 
 .gradientText {
@@ -33,4 +33,27 @@
   to {
     background-position: var(--bgSize) 0;
   }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #1c1d1d;
+}
+
+.navbar a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: 12px 50px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #1c1d1d;
 }
