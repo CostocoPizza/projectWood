@@ -18,7 +18,6 @@
 - Add/Find Apps
 - Wildcarding (Cloudflare?)
 - Add Cloaking
-- Nav bar
 - Socials
 - Credits Page
 - 
@@ -26,4 +25,6 @@
 ## Info
 Color Scheme/Palet
 Background color #171818
+Navbar Color #1c1d1d
+
 
