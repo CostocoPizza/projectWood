@@ -14,5 +14,15 @@
       <footer class="footer">
          <p>Made with ❤️ from a talented teen</p>
       </footer>
+      <script src="../assets/gameList.js"></script>
+      <script>
+         var counter = 0;
+         var gameListLength = gameList.length;
+         while (counter < gameListLength) {
+            counter = counter + 1;
+            var currentGame = gameList[counter]
+            console.log("Game detected in slot " + counter)
+         }
+      </script>
    </body>
 </html>

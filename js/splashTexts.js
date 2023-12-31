@@ -7,7 +7,6 @@ var splashTextsList = [
     "Best skid on the web",
     "Int Bg Rity",
     "Rocoo Taco",
-    "Fuck Mrs Smith me and all my homies hate Mrs Smith",
     "Do You Have A Snowflake?",
     "But he made graduation"
 ]
