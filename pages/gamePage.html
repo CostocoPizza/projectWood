@@ -1,45 +1,62 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <link rel="stylesheet" href="../css/master.css">
-      <title>Games</title>
-   </head>
-   <body>
-      <div class="navbar">
-         <a href="../homePage.html">Home</a>
-         <a href="gamePage.html">Games</a>
-         <a href="appPage.html">Apps</a>
-         <a href="settingPage.html">Other</a>
-      </div>
-      <footer class="footer">
-         <p>Made with ❤️ from a talented teen</p>
-      </footer>
-      <script src="../assets/gameList.js"></script>
-      <script>
-         var counter = 0;
-         var gameListLength = gameList.length;
-         var containerWidth = 1920;
-         var imageWidth = 100;
-         var padding = 50;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/gamePage.css">
+</head>
+<body>
 
-         while (counter < gameListLength) {
-            var currentGame = gameList[counter];
-            var totalPadding = (gameListLength - 1) * padding;
-            var availableWidth = containerWidth - totalPadding - gameListLength * imageWidth;
-            var leftPosition = (counter * (imageWidth + padding)) + (availableWidth / 2);
-    
-            console.log("ID: " + currentGame.id);
-            console.log("Title: " + currentGame.title);
-            console.log("Url: " + currentGame.url);
-            console.log("Image: " + currentGame.image);
-    
-            var imageElement = '<img src="' + currentGame.image + '" id="' + counter + '" style="width:100px; height:100px; position:absolute; border-radius: 7px; left:' + leftPosition + 'px;">';
-    
-            document.write(imageElement);
-    
-            counter = counter + 1;
-            console.log(screen.width);
-         }     
-      </script>
-   </body>
+<div class="navbar">
+    <a href="../homePage.html">Home</a>
+    <a href="gamePage.html">Games</a>
+    <a href="appPage.html">Apps</a>
+    <a href="settingPage.html">Other</a>
+</div>
+
+<footer class="footer">
+    <p>Made with ❤️ from a talented teen</p>
+</footer>
+
+<script src="../assets/gameList.js"></script>
+<script>
+var screenHeight = screen.height;
+var screenWidth = screen.width;
+var scrollBoxWidth = screenWidth * (2 / 3);
+var scrollBoxHeight = screenHeight * (2 / 3);
+
+document.write('<div class="gradientText" style="width: ' + scrollBoxWidth + 'px; height: ' + scrollBoxHeight + 'px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); overflow: hidden;">');
+document.write('<div class="scrollable-content">');
+
+var padding = 50;
+var imageSize = 125;
+var counter = 1;
+var gameListLength = gameList.length;
+
+var currentRow = 0;
+var leftPosition = 0;
+
+while (counter < gameListLength) {
+    var currentGame = gameList[counter];
+
+    if (leftPosition + imageSize > scrollBoxWidth) {
+        leftPosition = 0;
+        currentRow++;
+    }
+
+    var imgElement = '<img src="' + currentGame.image + '" id="' + counter + '" style="width:' + imageSize + 'px; height:' + imageSize + 'px; position:absolute; left: ' + leftPosition + 'px; top: ' + currentRow * (imageSize + padding) + 'px; border-radius: 25px; padding: ' + padding + 'px;">';
+
+    document.write(imgElement);
+
+    leftPosition += imageSize + padding;
+    counter++;
+}
+
+document.write('</div>');
+document.write('</div>');
+</script>
+
+</body>
 </html>

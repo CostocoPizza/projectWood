@@ -1,0 +1,24 @@
+.gradientText {
+    --bgSize: 400%;
+    --colorOne: hsl(40, 95%, 55%);
+    --colorTwo: hsl(15, 90%, 55%);
+    font-size: 36px;
+    color: transparent;
+    border: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--colorOne), var(--colorTwo), var(--colorOne)) 1;
+    border-image-slice: 1;
+    animation: move-bg 10s infinite linear;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .gradientText {
+      animation: move-bg 10s linear infinite;
+    }
+  }
+  
+  @keyframes move-bg {
+    to {
+      background-position: var(--bgSize) 0;
+    }
+  }
+  
